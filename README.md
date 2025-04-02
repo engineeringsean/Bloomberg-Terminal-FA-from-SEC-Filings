@@ -1,5 +1,5 @@
 # Bloomberg-Terminal-FA-from-SEC-Filings
- Uses SEC Company Financial Data Sets (Filings) to create a Bloomberg-style Financial Analysis table. Similar to what Yahoo Finance offers members for a $10 per month subscription.
+ Uses SEC Financial Datasets and Filings to create Bloomberg-Style Financial Analysis Tables. Similar to what Yahoo Finance offers members for a $10 per month subscription.
 
 **Transform SEC Financial Datasets into Bloomberg-Style KPI Tables with Integrated Price Data**
 
@@ -40,7 +40,7 @@ This pipeline:
 3. **Splits data into per-ticker `.tsv` files**
 4. **Enriches data with price history via Charles Schwab's Market Data API**
 5. **Structures the output to mimic Bloomberg Terminal financial statement tables**
-6. (Optional/Advanced) Integrates with a **PostgreSQL database + Django API + React frontend** *(code not yet included in this repo)*
+6. Integrates with a **PostgreSQL database + Django API + React frontend** *(code not yet included in this repo)*
 
 ---
 
