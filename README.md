@@ -9,7 +9,7 @@
 
 - [Project Overview](#-project-overview)
 - [Features](#-features)
-- [Example Input & Output Data](#-example-input-&-output-data)
+- [Example Input & Output Data](#-example-input-output-data)
   - [Ticker-Based Data Example](#-ticker-based-data-example)
   - [Bloomberg-Style Annual Table](#-bloomberg-style-annual-table)
   - [Sample Screenshots](#-sample-screenshots)
@@ -57,7 +57,7 @@ This pipeline:
 👉 Scalable and production-ready for large datasets
 
 ---
-
+<a name="-example-input-output-data"></a>
 ## 🗼️ Example Input & Output Data
 
 ### 📄 Raw SEC Dataset Example
@@ -92,15 +92,27 @@ AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111
 
 #### Raw SEC Dataset Screenshot
 
-![Raw SEC Dataset Example](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/SEC%20Financial%20Data%20Sets%20Example.PNG)
+<img 
+  src="https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/SEC%20Financial%20Data%20Sets%20Example.PNG" 
+  alt="Raw SEC Dataset Screenshot" 
+  width="600" 
+/>
 
 #### Ticker-Based TSV Screenshot
 
-![Raw Ticker TSV Example](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Ticker-Based%20MSFT%20Example.PNG)
+<img 
+  src="https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Ticker-Based%20MSFT%20Example.PNG" 
+  alt="Ticker-Based TSV Screenshot" 
+  width="600" 
+/>
 
-#### Bloomberg-Style Annual Table Screenshot
+#### Bloomberg-Style Table Screenshot
 
-![Sample Screenshot of Bloomberg-Style Table](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Bloomberg%20Terminal%20MSFT%20BS%20Example.PNG)
+<img 
+  src="https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Bloomberg%20Terminal%20MSFT%20BS%20Example.PNG" 
+  alt="Bloomberg-Style Table Screenshot" 
+  width="600" 
+/>
 
 ---
 
@@ -127,7 +139,7 @@ AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111
 - Adds price data & filing IDs alongside financial metrics
 
 ---
-
+<a name="-installation"></a>
 ## ⚙️ Installation
 
 1. Clone this repo:
@@ -176,7 +188,7 @@ data/output_data/
 ```
 
 ---
-
+<a name="-advanced-setup"></a>
 ## 🗃️ Advanced Setup
 
 **Database & API Layer (Coming Soon)**  
