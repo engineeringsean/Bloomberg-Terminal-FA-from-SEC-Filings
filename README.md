@@ -63,7 +63,7 @@ This pipeline:
 ### 📄 Raw SEC Dataset Example
 
 ```
-adsh    tag   	version   	ddate   	qtrs   	uom   	dimh   	iprx   	value   	footnote   	footlen    	dimn   	coreg   	durp   	datp   	dcml
+adsh	tag	version	ddate	qtrs	uom	dimh	iprx	value	footnote	footlen	dimn	coreg	durp	datp	dcml
 0000320193-20-000096	Revenues	us-gaap/2020	20200930	4	USD	0xdd6adf652c868566bcc414c4acaf7af9	0	274515000000		0	3		0.021918058	4.0	-6
 0000320193-21-000010	Revenues	us-gaap/2020	20201231	1	USD	0xb8ba6a9ef479afc51e87d63625c7949d	0	111439000000		0	3		0.013698995	5.0	-6
 ```
