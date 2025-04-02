@@ -10,7 +10,7 @@
 - [Project Overview](#-project-overview)
 - [Features](#-features)
 - [Example Input & Output Data](#-example-input-&-output-data)
-  - [Ticker-Based Raw Data Example](#-ticker-based-raw-data-example)
+  - [Ticker-Based Data Example](#-ticker-based-data-example)
   - [Bloomberg-Style Annual Table](#-bloomberg-style-annual-table)
   - [Sample Screenshots](#-sample-screenshots)
 - [How It Works](#-how-it-works)
@@ -68,7 +68,7 @@ adsh	tag	version	ddate	qtrs	uom	dimh	iprx	value	footnote	footlen	dimn	coreg	durp
 0000320193-21-000010	Revenues	us-gaap/2020	20201231	1	USD	0xb8ba6a9ef479afc51e87d63625c7949d	0	111439000000		0	3		0.013698995	5.0	-6
 ```
 
-### 📄 Output Ticker-Based Data Example
+### 📄 Ticker-Based Data Example
 
 ```
 ticker    form     cik       adsh                    tag         ddate       value         filed      price
@@ -76,7 +76,7 @@ AAPL      10-K     320193    0000320193-20-000096    Revenues    20200930    274
 AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111439000000  20210128   135.12
 ```
 
-### 📊 Output Bloomberg-Style Annual Table
+### 📊 Bloomberg-Style Annual Table
 
 | ticker | in_usd               | fy_2020       | fy_2021       | fy_2022       |
 |------|----------------------|---------------|---------------|---------------|
@@ -94,11 +94,11 @@ AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111
 
 ![Raw SEC Dataset Example](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/SEC%20Financial%20Data%20Sets%20Example.PNG)
 
-#### Output Ticker-Based TSV Screenshot
+#### Ticker-Based TSV Screenshot
 
 ![Raw Ticker TSV Example](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Ticker-Based%20MSFT%20Example.PNG)
 
-#### Output Bloomberg-Style Annual Table Screenshot
+#### Bloomberg-Style Annual Table Screenshot
 
 ![Sample Screenshot of Bloomberg-Style Table](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Bloomberg%20Terminal%20MSFT%20BS%20Example.PNG)
 
