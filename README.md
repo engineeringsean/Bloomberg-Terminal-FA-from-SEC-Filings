@@ -204,7 +204,7 @@ Once properly documented, these components will be source-available in this repo
 
 ## 📚 SEC Data Sources
 
-- [SEC Financial Notes and Datasets](https://www.sec.gov/dera/data/financial-statement-data-sets.html)
+- [SEC Financial Notes and Datasets](https://www.sec.gov/data-research/sec-markets-data/financial-statement-notes-data-sets)
 - [SEC Ticker-CIK Mapping](https://www.sec.gov/include/ticker.txt)
 
 ---
