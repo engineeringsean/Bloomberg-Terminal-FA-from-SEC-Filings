@@ -9,14 +9,14 @@
 
 - [Project Overview](#-project-overview)
 - [Features](#-features)
-- [Example Output](#-example-output)
+- [Example Input & Output Data](#-example-input-&-output-data)
   - [Ticker-Based Raw Data Example](#-ticker-based-raw-data-example)
   - [Bloomberg-Style Annual Table](#-bloomberg-style-annual-table)
   - [Sample Screenshots](#-sample-screenshots)
 - [How It Works](#-how-it-works)
 - [Installation](#-installation)
 - [Usage](#-usage)
-- [Optional Advanced Setup](#-optional-advanced-setup)
+- [Advanced Setup](#-advanced-setup)
 - [SEC Data Sources](#-sec-data-sources)
 - [Future Roadmap](#-future-roadmap)
 - [About](#-about)
@@ -42,6 +42,8 @@ This pipeline:
 5. **Structures the output to mimic Bloomberg Terminal financial statement tables**
 6. Integrates with a **PostgreSQL database + Django API + React frontend** *(code not yet included in this repo)*
 
+![Sample Screenshot of Bloomberg-Style Table](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Bloomberg%20Terminal%20MSFT%20BS%20Example.PNG)
+
 ---
 
 ## 🔥 Features
@@ -56,17 +58,25 @@ This pipeline:
 
 ---
 
-## 🗼️ Example Output
+## 🗼️ Example Input & Output Data
 
-### 📄 Ticker-Based Raw Data Example
+### 📄 Raw SEC Dataset Example
 
 ```
-ticker    form     cik       adsh               tag         ddate      value      filed     price
+adsh    tag   	version   	ddate   	qtrs   	uom   	dimh   	iprx   	value   	footnote   	footlen    	dimn   	coreg   	durp   	datp   	dcml
+0000320193-20-000096	Revenues	us-gaap/2020	20200930	4	USD	0xdd6adf652c868566bcc414c4acaf7af9	0	274515000000		0	3		0.021918058	4.0	-6
+0000320193-21-000010	Revenues	us-gaap/2020	20201231	1	USD	0xb8ba6a9ef479afc51e87d63625c7949d	0	111439000000		0	3		0.013698995	5.0	-6
+```
+
+### 📄 Output Ticker-Based Data Example
+
+```
+ticker    form     cik       adsh                    tag         ddate       value         filed      price
 AAPL      10-K     320193    0000320193-20-000096    Revenues    20200930    274515000000  20201030   110.44
 AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111439000000  20210128   135.12
 ```
 
-### 📊 Bloomberg-Style Annual Table
+### 📊 Output Bloomberg-Style Annual Table
 
 | ticker | in_usd               | fy_2020       | fy_2021       | fy_2022       |
 |------|----------------------|---------------|---------------|---------------|
@@ -80,13 +90,17 @@ AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111
 
 ### 📷 Sample Screenshots
 
-#### Raw Per-Ticker TSV Example
+#### Raw SEC Dataset Screenshot
 
-![Raw Ticker TSV Example](https://raw.githubusercontent.com/yourusername/sec-financial-transformer/main/assets/ticker_tsv_example.png)
+![Raw SEC Dataset Example](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/SEC%20Financial%20Data%20Sets%20Example.PNG)
 
-#### Bloomberg-Style Table Screenshot
+#### Output Ticker-Based TSV Screenshot
 
-![Sample Screenshot of Bloomberg-Style Table](https://raw.githubusercontent.com/yourusername/sec-financial-transformer/main/assets/sample_table.png)
+![Raw Ticker TSV Example](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Ticker-Based%20MSFT%20Example.PNG)
+
+#### Output Bloomberg-Style Annual Table Screenshot
+
+![Sample Screenshot of Bloomberg-Style Table](https://github.com/engineeringsean/Bloomberg-Terminal-FA-from-SEC-Filings/blob/main/docs/assets/Bloomberg%20Terminal%20MSFT%20BS%20Example.PNG)
 
 ---
 
@@ -118,8 +132,8 @@ AAPL      10-Q     320193    0000320193-21-000010    Revenues    20201231    111
 
 1. Clone this repo:
 ```bash
-git clone https://github.com/yourusername/sec-financial-transformer.git
-cd sec-financial-transformer
+git clone https://github.com/engineeringsean/bloomberg-terminal-fa-from-sec-filings.git
+cd bloomberg-terminal-fa-from-sec-filings
 ```
 
 2. Install dependencies:
@@ -163,7 +177,7 @@ data/output_data/
 
 ---
 
-## 🗃️ Optional Advanced Setup
+## 🗃️ Advanced Setup
 
 **Database & API Layer (Coming Soon)**  
 This project was built to support dynamic querying via:
@@ -172,7 +186,7 @@ This project was built to support dynamic querying via:
 - Django REST API
 - React Frontend
 
-Once properly documented, these components will be open-sourced in this repository as well.
+Once properly documented, these components will be source-available in this repository as well.
 
 ---
 
@@ -185,11 +199,10 @@ Once properly documented, these components will be open-sourced in this reposito
 
 ## 🌐 Future Roadmap
 
-- [ ] Add Dockerized deployment
-- [ ] Integrate Database + API + React app
+- [ ] Publicly accessible Bloomberg-Style Tables via website
+- [ ] Document Database + API + React app on Github
 - [ ] Add sample PostgreSQL schema & migrations
-- [ ] Provide Jupyter Notebook for quick KPI analysis
-- [ ] Optional cloud deployment guide
+- [ ] Add Dockerized deployment
 
 ---
 
