@@ -50,19 +50,34 @@ def main():
         output_dir=TICKER_SPLIT_DIR
     )
 
-    # Step 5: OAuth and add price data
-    load_config(CONFIG_FILE)    # loads APP_KEY, ACCESS_TOKEN, etc.
-    get_bearer_token()         # triggers OAuth flow if tokens missing/expired
-    add_price_to_files(
-        input_dir=TICKER_SPLIT_DIR,
-        output_dir=TICKER_PRICE_DIR
-    )
+    # Step 5: OAuth and add price data if user accepts
+    gotPrice = False
+
+    print("Get prices for each ticker on filing dates using your Charles Schwab API credentials? (Y/N)")
+    getPrice = input().strip().upper()
+
+    if getPrice == "Y":
+        load_config(CONFIG_FILE)    # loads APP_KEY, ACCESS_TOKEN, etc.
+        get_bearer_token()         # triggers OAuth flow if tokens missing/expired
+        add_price_to_files(
+            input_dir=TICKER_SPLIT_DIR,
+            output_dir=TICKER_PRICE_DIR
+        )
+        gotPrice = True
 
     # Step 6: Simplify columns
-    simplify_ticker_files(
-        input_dir=TICKER_PRICE_DIR,
-        output_dir=FINAL_TICKER_DIR
-    )
+    if gotPrice == True:
+        simplify_ticker_files(
+            gotPrice,
+            input_dir=TICKER_PRICE_DIR,
+            output_dir=FINAL_TICKER_DIR
+        )
+    elif gotPrice == False:
+        simplify_ticker_files(
+            gotPrice,
+            input_dir=TICKER_SPLIT_DIR,
+            output_dir=FINAL_TICKER_DIR
+        )
 
     # Step 7: Transform data into Bloomberg_Style tsv tables
     transform_all_tickers(
@@ -70,7 +85,7 @@ def main():
         output_dir=BLOOMBERG_STYLE_DIR
     )
 
-    print(f"Bloomberg-style tables are in: {BLOOMBERG_STYLE_DIR}")
+    print(f"Bloomberg-style financial tables are in: {BLOOMBERG_STYLE_DIR}")
 
 
 if __name__ == "__main__":

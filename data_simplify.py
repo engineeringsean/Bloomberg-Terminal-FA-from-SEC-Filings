@@ -4,28 +4,46 @@ import os
 import pandas as pd
 from tqdm import tqdm
 
-def simplify_ticker_files(input_dir, output_dir):
+def simplify_ticker_files(gotPrice, input_dir, output_dir):
     """
     Reads each ticker file in input_dir, keeps only the selected columns,
     and writes the simplified file to output_dir.
     """
-    selected_columns = [
+    if gotPrice == True:
+        selected_columns = [
+            "ticker", "form", "cik", "adsh", "tag",
+            "ddate", "qtrs", "value", "dimn", "filed", "price"
+        ]
+        column_types = {
+            "ticker": str,
+            "form": str,
+            "cik": int,
+            "adsh": str,
+            "tag": str,
+            "ddate": int,
+            "qtrs": int,
+            "value": float,
+            "dimn": int,
+            "filed": int,
+            "price": float
+        }
+    else:
+        selected_columns = [
         "ticker", "form", "cik", "adsh", "tag",
-        "ddate", "qtrs", "value", "dimn", "filed", "price"
+        "ddate", "qtrs", "value", "dimn", "filed"
     ]
-    column_types = {
-        "ticker": str,
-        "form": str,
-        "cik": int,
-        "adsh": str,
-        "tag": str,
-        "ddate": int,
-        "qtrs": int,
-        "value": float,
-        "dimn": int,
-        "filed": int,
-        "price": float
-    }
+        column_types = {
+            "ticker": str,
+            "form": str,
+            "cik": int,
+            "adsh": str,
+            "tag": str,
+            "ddate": int,
+            "qtrs": int,
+            "value": float,
+            "dimn": int,
+            "filed": int,
+        }
 
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
