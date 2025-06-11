@@ -191,8 +191,8 @@ data/output_data/
 <a name="-advanced-setup"></a>
 ## 🗃️ Advanced Setup
 
-**Database & API Layer (Coming Soon)**  
-This project was built to support dynamic querying via:
+**Database & API Layer**  
+This project supports dynamic querying via:
 
 - PostgreSQL Database
 - Django REST API
