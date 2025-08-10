@@ -12,13 +12,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 INPUT_DIR = os.path.join(PROJECT_ROOT, "data", "input_data")
 OUTPUT_DIR = os.path.join(PROJECT_ROOT, "data", "output_data")
 
-# Intermediate combined file paths
-COMBINED_NUM_PATH = os.path.join(OUTPUT_DIR, "combined_num.tsv")
-COMBINED_SUB_PATH = os.path.join(OUTPUT_DIR, "combined_sub.tsv")
-UPDATED_COMBINED_NUM_PATH = os.path.join(OUTPUT_DIR, "updated_combined_num.tsv")
-
 # Directories for per-ticker files
-TICKER_SPLIT_DIR = os.path.join(OUTPUT_DIR, "Ticker_Split")
 TICKER_PRICE_DIR = os.path.join(OUTPUT_DIR, "Ticker_With_Price")
 FINAL_TICKER_DIR = os.path.join(OUTPUT_DIR, "Final_Ticker_Files")
 BLOOMBERG_STYLE_DIR = os.path.join(OUTPUT_DIR, "Bloomberg_Style_Tables")
